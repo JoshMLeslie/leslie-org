@@ -1,0 +1,95 @@
+:root {
+	--bg-red: #800202;
+	--border-styling: 4px solid var(--bg-red);
+}
+
+body {
+	background: url(./assets/img/leslie-bg.jpg);
+	color: #000000;
+	font-size: 14pt;
+	width: 100%;
+	font-family: Garamond, 'Times New Roman', Times;
+}
+
+a:link {
+	color: #777;
+	text-decoration: none;
+}
+a:visited,
+a:active {
+	color: #999;
+	text-decoration: none;
+}
+a:hover {
+	color: #000000;
+	text-decoration: underline;
+}
+
+#main-container,
+#hero-container,
+#nav {
+	display: flex;
+}
+
+#main-container {
+	min-width: 80%;
+	max-width: 800px;
+	margin: 32px auto 0 auto;
+	gap: 16px;
+}
+
+#hero-container {
+	flex: 1 1;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#hero-container h1 {
+	background: white;
+	width: 100%;
+	text-align: center;
+	margin: 16px 0 0 0;
+	padding: 16px 0;
+	border: var(--border-styling);
+}
+
+#hero-image {
+	max-height: 600px;
+	object-fit: contain;
+	width: fit-content;
+	background: var(--bg-red);
+	border-radius: 130px;
+	padding: 4px;
+}
+
+#nav {
+	flex: 1 1;
+	flex-direction: column;
+	gap: 8px;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	box-sizing: border-box;
+	background-color: #fff;
+	border: var(--border-styling);
+	list-style: none;
+}
+
+#nav li a {
+	padding: 16px;
+	display: block;
+}
+
+@media screen and (max-width: 1000px) {
+	#main-container {
+		flex-direction: column;
+		padding: 0 16px;
+	}
+
+	#hero-image {
+		max-height: 300px;
+	}
+}
